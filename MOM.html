@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>MOM Project</title>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<style>
+			body {
+				font-family: Arial;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			@font-face {
+				font-family: K2D;
+				src: url(Fonts/K2D/K2D-Bold.ttf) format("truetype");
+			}
+	
+			@font-face {
+				font-family: Krub;
+				src: url(Fonts/Krub/Krub-Medium.ttf) format("truetype");
+			}
+			@font-face {
+				font-family: Teko;
+				src: url(Fonts/Teko/Teko-Bold.ttf) format("truetype");
+			}
+
+			.container {
+				color: #fff;
+				max-width: 100%;
+				margin: 0 auto;
+				background-color: #222;
+				font-size: 24px;
+				padding: 25px;
+				padding-left: 250px;
+				padding-right: 250px;
+			}
+			
+			.container1 {
+				background-color: #F6F6F6;
+				color: black;
+				padding: 25px;
+				padding-left: 1px;
+				padding-right: 1px;
+				border-radius: 20px;
+			}
+
+			.parallax1 {
+				min-height: 600px;
+				background: transparent;
+			}
+			.parallax2 {
+				min-height: 400px;
+				background: transparent;
+			}
+			.parallax3 {
+				min-height: 250px;
+				background: transparent;
+			}
+
+			#Home1 {
+				position: absolute;
+				top: 140px;
+				left: 580px;
+				font-size: 50px;
+				font-family: Teko;
+				color: #439CF0;
+				text-decoration: none;
+			}
+
+			#Home2 {
+				position: absolute;
+				top: 290px;
+				left: 470px;
+				font-family: Krub;
+			}
+
+			.topic1 {
+				position: absolute;
+				color: #439CF0;
+				top: 1000px;
+				left: 265px;
+				font-family: Teko;
+				font-size: 50px;
+			}
+			
+			.topic2 {
+				position: absolute;
+				color: #439CF0;
+				top: 1870px;
+				left: 255px;
+				font-family: Teko;
+				font-size: 50px;
+			}
+			
+			#Scrolltotop {
+				display: none;
+				height: 50px;
+				width: 50px;
+				background-color: #439CF0;
+				border-radius: 50%;
+				border: 0px;
+				bottom: 20px;
+				right: 30px;
+				position: fixed;
+				opacity: 0.6;
+			}
+			.button {
+				background-color: #439CF0;
+				border-radius: 7px;
+				font-size: 20px;
+				color: white;
+				padding: 15px;
+				font-family: Arial;
+				cursor: pointer;
+			}
+			.button1 {
+				background-color: #439CF0;
+				border-radius: 7px;
+				color: white;
+				padding: 8px;
+				cursor: pointer;
+			}
+			#Scrolltotop:hover {
+				opacity: 1;
+				cursor: pointer;
+			}
+			r {
+				color: white;
+			}
+			#box1 {
+				width: 500px;
+				overflow: hidden;
+				background: #f1f1f1;
+				box-shadow: 0 0 20px black;
+				border-radius: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 20px;
+				z-index: 9999;
+				display: none;
+			}
+			#box2 {
+				width: 500px;
+				overflow: hidden;
+				background: #f1f1f1;
+				box-shadow: 0 0 20px black;
+				border-radius: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 20px;
+				z-index: 9999;
+				display: none;
+			}
+			#box3 {
+				width: 500px;
+				overflow: hidden;
+				background: #f1f1f1;
+				box-shadow: 0 0 20px black;
+				border-radius: 8px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 20px;
+				z-index: 9999;
+				display: none;
+			}
+			
+			.figure {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#area1 {
+				position: absolute;
+				top: 1336px;
+				left: 368px;
+				font-size: 15px;
+			}
+			#area2 {
+				position: absolute;
+				top: 1350px;
+				left: 540px;
+				font-size: 15px;
+			}
+			#area3 {
+				position: absolute;
+				top: 1346px;
+				left: 823px;
+				font-size: 15px;
+			}
+			#length1 {
+				position: absolute;
+				top:  1520px;
+				left:  439px;
+				font-size: 13px;
+			}
+			#length2 {
+				position: absolute;
+				top:  1520px;
+				left:  585px;
+				font-size: 13px;
+			}
+			#length3 {
+				position: absolute;
+				top:  1520px;
+				left:  765px;
+				font-size: 13px;
+			}
+			#areacont {
+				position: absolute;
+				top: 2297px;
+				left: 375px;
+				font-size: 15px;
+			}
+			#majordia {
+				position: absolute;
+				top: 2317px;
+				left: 540px;
+				font-size: 15px;
+			}
+			#minordia {
+				position: absolute;
+				top: 2362px;
+				left: 690px;
+				font-size: 15px;
+			}
+			#areacont2 {
+				position: absolute;
+				top: 2349px;
+				left: 867px;
+				font-size: 15px;
+			}
+			#lengthcont1 {
+				position: absolute;
+				top:  2550px;
+				left:  457px;
+				font-size: 13px;
+			}
+			#lengthcont2 {
+				position: absolute;
+				top:  2548px;
+				left:  670px;
+				font-size: 13px;
+			}
+			#lengthcont3 {
+				position: absolute;
+				top:  2524px;
+				left:  810px;
+				font-size: 13px;
+			}
+			#linkcenter {
+				text-align: center;
+				color: #439CF0;
+			}
+			#ul {
+				text-decoration: none;
+				color: #439CF0;
+			}
+			#last {
+				position: absolute;
+				color: #439CF0;
+				top: 2000px;
+				left: 565px;
+				font-family: Teko;
+				font-size: 50px;
+			}
+			.last {
+				position: absolute;
+				color: #439CF0;
+				top: 2665px;
+				left: 585px;
+				font-family: Teko;
+				font-size: 50px;
+			}
+			.foot {
+				background-color: black;
+				color: white;
+				font-family: Arial;
+				padding: 250px;
+			}
+			#Parthimg {
+				width: 150px;
+				position: absolute;
+				top: 2880px;
+				left: 100px;
+				border-radius: 50%;
+			}
+			#Shreyimg {
+				width: 150px;
+				position: absolute;
+				top: 2880px;
+				left: 425px;
+				border-radius: 50%;
+			}
+			#Shahidimg {
+				width: 150px;
+				position: absolute;
+				top: 2880px;
+				right: 425px;
+				border-radius: 50%;
+			}
+			#Muskanimg {
+				width: 150px;
+				height: 200px;
+				position: absolute;
+				top: 2880px;
+				right: 100px;
+				border-radius: 50%;
+			}
+			#Parthname {
+				position: absolute;
+				top: 3080px;
+				left: 100px;
+			}
+			#Shreyname {
+				position: absolute;
+				top: 3080px;
+				left: 425px;
+			}
+			#Shahidname {
+				position: absolute;
+				top: 3080px;
+				right: 395px;
+			}
+			#Muskanname {
+				position: absolute;
+				top: 3080px;
+				right: 72px;
+			}
+			
+		</style>
+		
+		<!--Parallax links-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="parallax.js-1.5.0/parallax.min.js"></script>
+		<!--Parallax links end-->
+		
+	</head>
+
+	<body>
+		<div class="parallax1" data-parallax="scroll" z-index="1" data-image-src="Images/Background.jpg">
+				<a href="MOM.html" id="Home1"><h1>BARS</h1></a>
+			<div id="Home2">
+				<h3>DAYANANDA SAGAR COLLEGE OF ENGINEERING</h3>
+			</div>
+		</div>
+		<div class="container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+			   ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+		       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+		       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+		       sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+		       est laborum.
+			</p>
+		</div>
+		<div class="parallax2" data-parallax="scroll" z-index="1" data-image-src="Images/Background1.jpg">
+			<div>
+				<h1 class="topic1">Bars With Cross-section Varying in Steps</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="container1">
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<div id="linkcenter">
+					<a href="steps.html" id="ul">Both ends free</a> , <a href="steps04.html" id="ul">4 Sections</a><br />
+					<a href="steps1.html" id="ul">One end free, One end fixed</a> , <a href="steps14.html" id="ul">4 Sections</a><br />
+					<a href="steps2.html" id="ul">Both ends fixed</a> , <a href="steps24.html" id="ul">4 Sections</a>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+		</div>
+		<div class="parallax2" data-parallax="scroll" z-index="1" data-image-src="Images/Background1.jpg">
+			<div>
+				<h1 class="topic2">Bars With Continuously Varying Cross-section</h1>
+			</div>
+		</div>  
+		<div class="container">
+			<div class="container1">
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<div id="linkcenter">
+					<a href="cont.html" id="ul">Both ends free</a><br />
+					<a href="cont1.html" id="ul">One end free, One end fixed</a><br />
+					<a href="cont2.html" id="ul">Both ends fixed</a>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+		</div>
+		<div class="parallax3" data-parallax="scroll" z-index="1" data-image-src="Images/Background1.jpg">
+			<div>
+				<h1 class="last">Thank You</h1>
+			</div>
+		</div>
+		<footer>
+			<div class="foot">
+				<div>
+					<img id="Parthimg" src="Images/Parth.jpg" />
+					<p id="Parthname">
+						Parth Borse<br /><br />
+						III Semister<br /><br />
+						Aeronautical Engineering<br /><br />
+						1DS17AE030<br /><br />
+					</p>
+				</div>
+				<div>
+					<img id="Shreyimg" src="Images/Shrey.jpeg" />
+					<p id="Shreyname">
+						Shrey Porwal<br /><br />
+						III Semister<br /><br />
+						Aeronautical Engineering<br /><br />
+						1DS17AE042<br /><br />
+					</p>
+				</div>
+				<div>
+					<img id="Shahidimg" src="Images/Shahid.jpeg" />
+					<p id="Shahidname">
+						Shahid Adnan<br /><br />
+						III Semister<br /><br />
+						Aeronautical Engineering<br /><br />
+						1DS17AE040<br /><br />
+					</p>
+				</div>
+				<div>
+					<img id="Muskanimg" src="Images/Muskan1.jpeg" />
+					<p id="Muskanname">
+						Muskan Rastogi<br /><br />
+						III Semister<br /><br />
+						Aeronautical Engineering<br /><br />
+						1DS17AE028<br /><br />
+					</p>
+				</div>
+			</div>
+		</footer>
+		<div>
+			<button onclick="topofpage()" id="Scrolltotop"><r class="fa fa-arrow-up"></r></button>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		
+	<!--Scrolling-->
+		window.onscroll = function() {
+		scrollFunction()
+		};
+		function scrollFunction() {
+		if (document.documentElement.scrollTop > 50) {
+		document.getElementById("Scrolltotop").style.display = "block";
+		}
+		else {
+		document.getElementById("Scrolltotop").style.display = "none";
+		}
+		}
+		function topofpage() {
+		window.scrollTo(0,0);
+		}
+	<!--Scrolling End-->
+	
+	</script>
+</html>

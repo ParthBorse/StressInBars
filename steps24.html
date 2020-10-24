@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Both Ends Fixed</title>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<style >
+			body {
+				font-family: Arial;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			@font-face {
+				font-family: K2D;
+				src: url(Fonts/K2D/K2D-Bold.ttf) format("truetype");
+			}
+	
+			@font-face {
+				font-family: Krub;
+				src: url(Fonts/Krub/Krub-Medium.ttf) format("truetype");
+			}
+			@font-face {
+				font-family: Teko;
+				src: url(Fonts/Teko/Teko-Bold.ttf) format("truetype");
+			}
+			.parallax1 {
+				min-height: 600px;
+				background: transparent;
+			}
+			#Home1 {
+				position: absolute;
+				top: 140px;
+				left: 580px;
+				font-size: 50px;
+				font-family: Teko;
+				color: #439CF0;
+				text-decoration: none;
+			}
+
+			#Home2 {
+				position: absolute;
+				top: 290px;
+				left: 520px;
+				font-family: Krub;
+			}
+			#Home3 {
+				position: absolute;
+				top: 310px;
+				left: 610px;
+				font-family: Krub;
+			}
+			.container {
+				color: #fff;
+				max-width: 100%;
+				margin: 0 auto;
+				background-color: #222;
+				font-size: 24px;
+				padding: 25px;
+				padding-left: 250px;
+				padding-right: 250px;
+			}
+			
+			.container1 {
+				background-color: #F6F6F6;
+				color: black;
+				padding: 25px;
+				padding-left: 1px;
+				padding-right: 1px;
+				border-radius: 20px;
+			}
+			.figure {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#area1 {
+				position: absolute;
+				top: 670px;
+				left: 368px;
+				font-size: 15px;
+			}
+			#area2 {
+				position: absolute;
+				top: 684px;
+				left: 540px;
+				font-size: 15px;
+			}
+			#area3 {
+				position: absolute;
+				top: 680px;
+				left: 823px;
+				font-size: 15px;
+			}
+			#area4 {
+				position: absolute;
+				top: 709px;
+				left: 848px;
+				font-size: 15px;
+			}
+			#length1 {
+				position: absolute;
+				top:  854px;
+				left:  469px;
+				font-size: 13px;
+			}
+			#length2 {
+				position: absolute;
+				top:  854px;
+				left:  615px;
+				font-size: 13px;
+			}
+			#length3 {
+				position: absolute;
+				top:  854px;
+				left:  735px;
+				font-size: 13px;
+			}
+			#length4 {
+				position: absolute;
+				top:  854px;
+				left:  820px;
+				font-size: 13px;
+			}
+			.button {
+				background-color: #439CF0;
+				border-radius: 7px;
+				font-size: 20px;
+				color: white;
+				padding: 15px;
+				font-family: Arial;
+				cursor: pointer;
+			}
+			#Scrolltotop {
+				display: none;
+				height: 50px;
+				width: 50px;
+				background-color: #439CF0;
+				border-radius: 50%;
+				border: 0px;
+				bottom: 20px;
+				right: 30px;
+				position: fixed;
+				opacity: 0.6;
+			}
+			#Scrolltotop:hover {
+				opacity: 1;
+				cursor: pointer;
+			}
+			r {
+				color: white;
+			}
+			#assume {
+				
+				text-align: right;
+				font-size: 14px;
+			}
+		</style>
+		
+		<!--Parallax links-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="parallax.js-1.5.0/parallax.min.js"></script>
+		<!--Parallax links end-->
+	</head>
+	<body>
+		<div class="parallax1" data-parallax="scroll" z-index="1" data-image-src="Images/Background.jpg">
+			<a href="MOM.html" id="Home1"><h1>BARS</h1></a>
+			<div id="Home2">
+				<h3>With Cross-section Varying in Steps</h3>
+			</div>
+			<div id="Home3">
+				<h3>Both Ends Fixed</h3>
+			</div>
+		</div>
+		<div class="container">
+			<div class="container1">
+				<br />
+				<img class="figure" src="Images/barstep2 - Copy.jpg" />
+				<form id="clean" name="input_step_form" action="javascript:stepbar();">
+				<div id="area1">
+					Diameter 1: <input type="text" onfocus="this.value=''" value="mm" name="diameter1" size="3" required>
+				</div>
+				<div id="area2">		
+					Diameter 2: <input type="text" onfocus="this.value=''" value="mm" name="diameter2" size="3" required>
+				</div>
+				<div id="area3">
+					Diameter 3: <input type="text" onfocus="this.value=''" value="mm" name="diameter3" size="3" required>
+				</div>
+				<div id="area4">
+					Diameter 4: <input type="text" onfocus="this.value=''" value="mm" name="diameter4" size="3" required>
+				</div>
+				<div id="length1">
+					Length 1: <br /><input type="text" onfocus="this.value=''" value="mm" name="lengthbar1" size="3" required>
+				</div>
+				<div id="length2">
+					Length 2: <br /><input type="text" onfocus="this.value=''" value="mm" name="lengthbar2" size="3" required>
+				</div>
+				<div id="length3">
+					Length 3: <br /><input type="text" onfocus="this.value=''" value="mm" name="lengthbar3" size="3" required>
+				</div>
+				<div id="length4">
+					Length 4: <br /><input type="text" onfocus="this.value=''" value="mm" name="lengthbar4" size="3" required>
+				</div>
+				<div id="assume">
+					<p><br />If the load is of opposite direction to the assumed <br /> load, then consider the load to be negative.</p>
+				</div>
+				<br />
+					P1: <input type="text" onfocus="this.value=''" value="KN" name="loadbar1" size="3" required>
+					P2: <input type="text" onfocus="this.value=''" value="KN" name="loadbar2" size="3" required>
+					P3: <input type="text" onfocus="this.value=''" value="KN" name="loadbar3" size="3" required>
+					<br /><br />
+					Young's Modulus 1: <input type="text" onfocus="this.value=''" value="N/mm2" name="Ebar1" size="4" required>
+					<br />
+					Young's Modulus 2: <input type="text" onfocus="this.value=''" value="N/mm2" name="Ebar2" size="4" required>
+					<br />
+					Young's Modulus 3: <input type="text" onfocus="this.value=''" value="N/mm2" name="Ebar3" size="4" required>
+					<br />
+					Young's Modulus 4: <input type="text" onfocus="this.value=''" value="N/mm2" name="Ebar4" size="4" required>
+					<br /><br />
+					<input class="button" type="submit" value="calculate">
+					<input class="button" type="button" onclick="Clean()" value="Clear">
+				</form>
+				<p id="output_bar_text"></p>
+				<br />
+			</div>
+		</div>
+		<div>
+			<button onclick="topofpage()" id="Scrolltotop"><r class="fa fa-arrow-up"></r></button>
+		</div>
+	</body>
+	<script>
+		var dia1, dia2, dia3, dia4, l1, l2, l3, l4, p1, p2, p3, Rd, Ra, e1, e2, e3, e4, d1, d2, d3, d4;
+		var stress1, stress2, stress3, stress4, strain1, strain2, strain3, strain4;
+		<!--Scrolling-->
+		window.onscroll = function() {
+		scrollFunction()
+		};
+		function scrollFunction() {
+		if (document.documentElement.scrollTop > 50) {
+		document.getElementById("Scrolltotop").style.display = "block";
+		}
+		else {
+		document.getElementById("Scrolltotop").style.display = "none";
+		}
+		}
+		function topofpage() {
+		window.scrollTo(0,0);
+		}
+		<!--Scrolling End-->
+		
+		<!--Step Bars-->
+		function stepbar() {
+		dia1 = document.forms["input_step_form"]["diameter1"].value;
+		dia2 = document.forms["input_step_form"]["diameter2"].value;
+		dia3 = document.forms["input_step_form"]["diameter3"].value;
+		dia4 = document.forms["input_step_form"]["diameter4"].value;
+		l1 = document.forms["input_step_form"]["lengthbar1"].value;
+		l2 = document.forms["input_step_form"]["lengthbar2"].value;
+		l3 = document.forms["input_step_form"]["lengthbar3"].value;
+		l4 = document.forms["input_step_form"]["lengthbar4"].value;
+		p1 = document.forms["input_step_form"]["loadbar1"].value;
+		p2 = document.forms["input_step_form"]["loadbar2"].value;
+		p3 = document.forms["input_step_form"]["loadbar3"].value;
+		e1 = document.forms["input_step_form"]["Ebar1"].value;
+		e2 = document.forms["input_step_form"]["Ebar2"].value;
+		e3 = document.forms["input_step_form"]["Ebar3"].value;
+		e4 = document.forms["input_step_form"]["Ebar4"].value;
+		
+		if(isNaN(dia1)) {
+			outputText = "Diameter 1 must be a number";
+		}
+		else if(isNaN(dia2)) {
+			outputText = "Diameter 2 must be a number";
+		}
+		else if(isNaN(dia3)) {
+			outputText = "Diameter 3 must be a number";
+		}
+		else if(isNaN(dia4)) {
+			outputText = "Diameter 4 must be a number";
+		}
+		else if(isNaN(l1)) {
+			outputText = "Length 1 must be a number";
+		}
+		else if(isNaN(l2)) {
+			outputText = "Length 2 must be a number";
+		}
+		else if(isNaN(l3)) {
+			outputText = "Length 3 must be a number";
+		}
+		else if(isNaN(l4)) {
+			outputText = "Length 4 must be a number";
+		}
+		else if(isNaN(p1)) {
+			outputText = "Load 1 must be a number";
+		}
+		else if(isNaN(p2)) {
+			outputText = "Load 2 must be a number";
+		}
+		else if(isNaN(p3)) {
+			outputText = "Load 3 must be a number";
+		}
+		else if(isNaN(e1)) {
+			outputText = "Young's Modulus of material 1 must be a number";
+		}
+		else if(isNaN(e2)) {
+			outputText = "Young's Modulus of material 2 must be a number";
+		}
+		else if(isNaN(e3)) {
+			outputText = "Young's Modulus of material 3 must be a number";
+		}
+		else if(isNaN(e4)) {
+			outputText = "Young's Modulus of material 4 must be a number";
+		}
+		else {
+			Ra = (((4*p1*l2) / (3.1415*dia2 * dia2 * e3)) + ((4*p1 * l3) / (3.1415*dia3 * dia3 * e3)) - ((4*p2 * l3) / (3.1415*dia3 * dia3 * e3)) + ((4*p1 * l4) / (3.1415*dia4 * dia4 * e4)) - ((4*p2 * l4) / (3.1415*dia4 * dia4 * e4)) - ((4*p3 * l4) / (3.1415*dia4 * dia4 * e4))) / (((4*l1) / (3.1415*dia1 * dia1 * e1)) + ((4*l2) / (3.1415*dia2 * dia2 * e2)) + ((4*l3) / (3.1415*dia3 * dia3 * e3)) + ((4*l4) / (3.1415*dia4 * dia4 * e4)));
+			Rd = Ra - (p1 - p2 - p3);
+			d1 = 4 * Ra * 1000 * l1 / (3.1415 * dia1 * dia1 * e1);
+			d2 = 4 * (Ra-p1) * 1000 * l2 / (3.1415 * dia2 * dia2 * e2);
+			d3 = 4 * (Ra-(p1-p2)) * 1000 * l3 / (3.1415 * dia3 * dia3 * e3);
+			d4 = 4 * (Ra - (p1 - p2 - p3)) * 1000 * l4 / (3.1415 * dia4 * dia4 * e4);
+			stress1 = 4 * Ra * 1000 / (3.1415 * dia1 * dia1);
+			stress2 = 4 * (Ra-p1) * 1000 / (3.1415 * dia2 * dia2);
+			stress3 = 4 * (Ra-(p1-p2)) * 1000 / (3.1415 * dia3 * dia3);
+			stress4 = 4 * (Ra-(p1-p2-p3)) * 1000 / (3.1415 * dia4 * dia4);
+			strain1 = d1 / l1;
+			strain2 = d2 / l2;
+			strain3 = d3 / l3;
+			strain4 = d4 / l4;
+			
+			var dd1 = d1.toFixed(2);
+			var dd2 = d2.toFixed(2);
+			var dd3 = d3.toFixed(2);
+			var dd4 = d4.toFixed(2);
+			var RRa = Ra.toFixed(2);
+			var RRd = Rd.toFixed(2);	
+			var sstress1 = stress1.toFixed(2);
+			var sstress2 = stress2.toFixed(2);
+			var sstress3 = stress3.toFixed(2);
+			var sstress4 = stress4.toFixed(2);
+			var sstrain1 = strain1.toFixed(4);
+			var sstrain2 = strain2.toFixed(4);
+			var sstrain3 = strain3.toFixed(4);
+			var sstrain4 = strain4.toFixed(4);
+			
+			outputText = "\u03B41 = " + dd1 + " mm<br> \u03B42 = " + dd2 + " mm<br> \u03B43 = " + dd3 + " mm<br> \u03B44 = " + dd4 + " mm<br> Ra = " + RRa + " KN<br> Rd = " + RRd +
+			" KN<br> Stress 1 = " + sstress1 + " N/mm2<br> Stress 2 = " + sstress2 + " N/mm2<br> Stress 3 = " + sstress3 + " N/mm2<br> Stress 4 = " + sstress4 + "N/mm2<br> Strain 1 = " + sstrain1 + 
+			"<br> Strain 2 = " + sstrain2 + "<br> Strain 3 = " + sstrain3 + "<br> Strain 4 = " + sstrain4;
+		}
+		
+		document.getElementById("output_bar_text").innerHTML = outputText;
+		}
+		<!--Step Bars End-->
+		<!--Reset Button-->
+		function Clean() {
+			document.getElementById("clean").reset();
+		}
+		<!--Reset Button End-->
+	</script>
+</html>
